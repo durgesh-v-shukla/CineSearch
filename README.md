@@ -10,10 +10,6 @@ CineSearch is a DS-II course project built on a real Netflix titles dataset. The
 So this project does not just implement data structures. It compares them under real query patterns, measures runtime, and shows where each approach wins.
 
 ## 2. Thinking Behind the Project
-Your professor asked for innovation: not only implementing textbook structures, but questioning existing choices and showing measurable differences with better alternatives.
-
-That is exactly what CineSearch does.
-
 Most systems use one dominant indexing strategy across many query types. This is practical, but not always optimal. CineSearch asks:
 
 - What if we keep industry-standard indexing as baseline?
