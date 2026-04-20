@@ -42,8 +42,8 @@ using namespace std;
 long long benchmarkAvgNs(function<void()> op, int minReps) {
     int reps = max(1, minReps);
     const int MAX_REPS = 10000000;
-    const long long TARGET_NS = 2000000; // keep timing window >= 2 ms
-    const int TRIALS = 5;
+    const long long TARGET_NS = 500000; // keep timing window >= 0.5 ms
+    const int TRIALS = 3;
     long long elapsedNs = 0;
 
     // Warm up once to reduce first-run cache and branch predictor noise.
@@ -321,7 +321,7 @@ void scenario3_RangeQuery(vector<Content>& titles, BPlusTreeInt& bptInt, Segment
 
     display.printPerfHeader();
     display.printInfo("Running benchmarks... please wait");
-    int REPS = 3000;
+    int REPS = 50;
     long long t1 = 0, t2 = 0, t3 = 0, t4 = 0;
 
     BENCH(linear.rangeQuery(titles, yearL, yearR);, REPS, t1)
@@ -382,7 +382,7 @@ void scenario4_TopK(vector<Content>& titles, BPlusTreeInt& bptInt, MaxHeap& heap
 
     display.printPerfHeader();
     display.printInfo("Running benchmarks... please wait");
-    int REPS = 100;
+    int REPS = 20;
     long long t1 = 0, t2 = 0, t3 = 0;
 
     BENCH(linear.topK(titles, k);, REPS, t1)
@@ -429,7 +429,7 @@ void compareAllMethods(vector<Content>& titles, BPlusTreeStr& bptStr, HashTable&
 
     display.printInfo("Running all scenario benchmarks... this may take a few seconds");
 
-    int REPS1 = 500, REPS2 = 500, REPS3 = 500, REPS4 = 100;
+    int REPS1 = 500, REPS2 = 500, REPS3 = 50, REPS4 = 20;
     long long s1Naive = 0, s1Best = 0;
     long long s2Naive = 0, s2Best = 0;
     long long s3Naive = 0, s3Best = 0;
