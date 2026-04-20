@@ -54,7 +54,7 @@ CineSearch shows why specialized structures matter:
 - Top-K latest: trending/new content lists, recommendation candidates, feed pre-ranking
 
 ## 6. Syllabus Analysis and Coverage (CS2308 DS-II)
-Below is how your project maps to syllabus topics.
+Below is how our project maps to syllabus topics.
 
 ### Section 1 - Advanced Trees, Priority Queues, Strings
 - Unit 1 (Advanced Trees):
